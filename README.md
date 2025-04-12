@@ -134,20 +134,14 @@ curl -sSL https://github.com/daswer123/pyarmor_pipeline/raw/main/00_boostrap.sh 
 
 ## Обзор рабочего процесса
 
-```
-[GitHub: Source Repo] <---- (git push разработчиком)
-         |
-         | (1. Запуск 05_build_and_push.sh)
-         V
-[Linux Машина: $WORK_DIR/source_repo] --- (2. git pull) ---> [Обновленные исходники]
-         |
-         | (3. pyarmor gen ...)
-         V
-[Linux Машина: .../source_repo/dist/] --- (4. Копирование) ---> [Linux Машина: $WORK_DIR/obf_repo] (старое содержимое удалено)
-         |
-         | (5. git add/commit/push)
-         V
-[GitHub: Obfuscated Repo]
+```mermaid
+graph TD
+    SourceGitHub["GitHub: Source Repo"] -- Push разработчика --> Trigger["Запуск 05_build_and_push.sh"];
+    Trigger --> PullSource["2. git pull в $WORK_DIR/source_repo"];
+    PullSource --> Build["3. pyarmor gen ..."];
+    Build --> Copy["4. Очистка $WORK_DIR/obf_repo + Копирование из dist/"];
+    Copy --> PushObf["5. git add/commit/push в $WORK_DIR/obf_repo"];
+    PushObf --> ObfGitHub["GitHub: Obfuscated Repo"];
 ```
 
 ## Запуск через Веб-хуки / n8n / Автоматизацию
