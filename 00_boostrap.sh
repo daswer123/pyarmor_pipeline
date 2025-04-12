@@ -12,8 +12,7 @@ SCRIPT_URLS=(
   "https://raw.githubusercontent.com/daswer123/pyarmor_pipeline/refs/heads/main/01_install_deps.sh"
   "https://raw.githubusercontent.com/daswer123/pyarmor_pipeline/refs/heads/main/02_configure_pyarmor.sh"
   "https://raw.githubusercontent.com/daswer123/pyarmor_pipeline/refs/heads/main/03_setup_ssh_and_clone.sh" # Новый объединенный скрипт
-  # "https://raw.githubusercontent.com/daswer123/pyarmor_pipeline/refs/heads/main/04_configure_ssh_and_clone.sh" # УДАЛЕНО
-  "https://raw.githubusercontent.com/daswer123/pyarmor_pipeline/refs/heads/main/05_build_and_push.sh"
+  "https://raw.githubusercontent.com/daswer123/pyarmor_pipeline/refs/heads/main/04_build_and_push.sh"
 )
 # --- Конец Конфигурации ---
 
