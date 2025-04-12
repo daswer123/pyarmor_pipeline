@@ -9,10 +9,10 @@ SCRIPTS_DIR="/root/scripts"
 ENV_FILE="/root/.env"
 # ОБНОВЛЕННЫЙ СПИСОК URL: убраны 03 и 04, добавлен новый 03_setup...
 SCRIPT_URLS=(
-  "https://raw.githubusercontent.com/daswer123/pyarmor_pipeline/refs/heads/main/01_install_deps.sh"
-  "https://raw.githubusercontent.com/daswer123/pyarmor_pipeline/refs/heads/main/02_configure_pyarmor.sh"
-  "https://raw.githubusercontent.com/daswer123/pyarmor_pipeline/refs/heads/main/03_setup_ssh_and_clone.sh" # Новый объединенный скрипт
-  "https://raw.githubusercontent.com/daswer123/pyarmor_pipeline/refs/heads/main/04_build_and_push.sh"
+  "https://github.com/daswer123/pyarmor_pipeline/raw/main/01_install_deps.sh"
+  "https://github.com/daswer123/pyarmor_pipeline/raw/main/02_configure_pyarmor.sh"
+  "https://github.com/daswer123/pyarmor_pipeline/raw/main/03_setup_ssh_and_clone.sh" # Новый объединенный скрипт
+  "https://github.com/daswer123/pyarmor_pipeline/raw/main/04_build_and_push.sh"
 )
 # --- Конец Конфигурации ---
 
