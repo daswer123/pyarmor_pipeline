@@ -8,16 +8,16 @@ echo ">>> Этап 2: Настройка глобальных параметро
 
 # Используем 'python -m pyarmor' для надежности
 echo ">>> Установка mix.str:includes (пример, замените на вашу регулярку при необходимости)..."
-python -m pyarmor cfg mix.str:includes "/regular expression/" || echo "Предупреждение: Не удалось установить mix.str:includes"
+pyarmor cfg mix.str:includes "/regular expression/" || echo "Предупреждение: Не удалось установить mix.str:includes"
 
 echo ">>> Установка mix_argnames=1..."
-python -m pyarmor cfg mix_argnames=1 || echo "Предупреждение: Не удалось установить mix_argnames"
+pyarmor cfg mix_argnames=1 || echo "Предупреждение: Не удалось установить mix_argnames"
 
 echo ">>> Установка optimize=2..."
-python -m pyarmor cfg optimize=2 || echo "Предупреждение: Не удалось установить optimize"
+pyarmor cfg optimize=2 || echo "Предупреждение: Не удалось установить optimize"
 
 echo ">>> Проверка текущих настроек PyArmor:"
-python -m pyarmor cfg
+pyarmor cfg
 
 echo ">>> Этап 2 (Настройка PyArmor) завершен!"
 
