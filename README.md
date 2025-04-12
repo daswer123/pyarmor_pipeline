@@ -51,7 +51,7 @@ curl -sSL https://github.com/daswer123/pyarmor_pipeline/raw/main/00_boostrap.sh 
 * Скачайте и запустите скрипт начальной загрузки. Он создаст директорию `/root/scripts/`, скачает туда все остальные скрипты, сделает их исполняемыми и создаст образец файла конфигурации `/root/.env`.
     ```bash
     # Убедитесь, что у вас есть curl (apt install curl)
-    curl -sSL [https://raw.githubusercontent.com/daswer123/pyarmor_pipeline/refs/heads/main/00_bootstrap.sh](https://raw.githubusercontent.com/daswer123/pyarmor_pipeline/refs/heads/main/00_bootstrap.sh) | sudo bash
+    curl -sSL https://github.com/daswer123/pyarmor_pipeline/raw/main/00_boostrap.sh | sudo bash
     ```
     *(Замените URL на актуальный, если он изменился)*
 
@@ -77,9 +77,8 @@ curl -sSL https://github.com/daswer123/pyarmor_pipeline/raw/main/00_boostrap.sh 
 * Выполните команду регистрации **после** установки PyArmor (Шаг 2) и **до** первой сборки (Шаг 5). Можно выполнить прямо сейчас:
     ```bash
     # Замените /path/to/your/regfile.zip на реальный путь к вашему файлу лицензии
-    sudo python -m pyarmor reg /path/to/your/regfile.zip
+    pyarmor reg /path/to/your/regfile.zip
     ```
-    *(Используйте `sudo python -m pyarmor`, так как PyArmor был установлен глобально)*
 
 **Шаг 3: Настройка конфигурации PyArmor**
 
