@@ -136,12 +136,12 @@ curl -sSL https://github.com/daswer123/pyarmor_pipeline/raw/main/00_boostrap.sh 
 
 ```mermaid
 graph TD
-    SourceGitHub["GitHub: Source Repo"] -- Push разработчика --> Trigger["Запуск 05_build_and_push.sh"];
-    Trigger --> PullSource["2. git pull в $WORK_DIR/source_repo"];
-    PullSource --> Build["3. pyarmor gen ..."];
-    Build --> Copy["4. Очистка $WORK_DIR/obf_repo + Копирование из dist/"];
-    Copy --> PushObf["5. git add/commit/push в $WORK_DIR/obf_repo"];
-    PushObf --> ObfGitHub["GitHub: Obfuscated Repo"];
+    SourceGitHub["GitHub: Source Repo"] -->|Push разработчика| Trigger["🛠 Запуск скрипта: 05_build_and_push.sh"]
+    Trigger --> PullSource["📥 Шаг 2: git pull в $WORK_DIR/source_repo"]
+    PullSource --> Build["🔐 Шаг 3: Обфускация — pyarmor gen ..."]
+    Build --> Copy["📂 Шаг 4: Очистка $WORK_DIR/obf_repo и копирование из dist/"]
+    Copy --> PushObf["📤 Шаг 5: git add/commit/push в $WORK_DIR/obf_repo"]
+    PushObf --> ObfGitHub["GitHub: Obfuscated Repo"]
 ```
 
 ## Запуск через Веб-хуки / n8n / Автоматизацию
